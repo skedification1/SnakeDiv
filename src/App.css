@@ -1,38 +1,138 @@
-.App {
-  text-align: center;
+html,
+body {
+  height: 100%;
+  /* overflow: hidden; */
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Fjalla One', sans-serif;
 }
+.container {
+  background: #c4b3a3;
+  background: radial-gradient(circle farthest-side at center center, #377c31 0%, #7e7267 100%);
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  position: relative;
+  max-width: 1400px;
+  height: 100vh;
+  margin: 0 auto;
   align-items: center;
+}
+
+.bcgForm {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50%;
+  background-color: bisque;
+
+  border: solid 3px rgb(231, 161, 30);
+}
+.bcgForm2 {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+  height: 400px;
+  background: #222;
+  border: solid 3px rgb(231, 161, 30);
+  border-radius: 5px;
+}
+
+.App {
+  position: relative;
+  padding-top: 200px;
+
+  width: 80%;
+  height: 70%;
+
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+}
+
+.snake {
+  width: 16px;
+  height: 16px;
+  background-color: rgb(39, 133, 81);
+  border-radius: 3px;
+}
+
+.formPoint {
+  width: 16px;
+  height: 16px;
+  background-color: rgb(88, 99, 93);
+  color: rgb(209, 191, 191);
+  background: radial-gradient(#423f3f, #111);
+
+  color: #fff;
+}
+
+.applePoint {
+  width: 16px;
+  height: 16px;
+  background: radial-gradient(#f71f1f, #5e5b5b);
+  border-radius: 5px;
+}
+.eatedApple {
+  width: 16px;
+  height: 16px;
+  background-color: rgb(39, 133, 81);
+  border-radius: 10px;
+}
+
+.scorePanel {
+  width: 400px;
+  height: 30px;
+  background-image: linear-gradient(to right, #006175 0%, #00a950 100%);
+  margin: 0 auto;
+  text-align: center;
+  align-items: center;
+  border: solid 2px rgb(231, 161, 30);
+  padding-top: 10px;
+  font-size: 1.4em;
+  border-radius: 5px;
+}
+.btnsPanel {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  width: 400px;
+}
+.btn {
+  width: 79px;
+}
+
+.btn {
+  background-image: linear-gradient(to right, #006175 0%, #00a950 100%);
+  border-radius: 40px;
+  box-sizing: border-box;
+  color: #e2e4e3;
+  display: block;
+  height: 30px;
+
+  padding: 4px;
+  position: relative;
+  text-decoration: none;
+
+  z-index: 2;
+}
+
+.btn:hover {
+  color: rgb(231, 161, 30);
+}
+
+.btn .span {
+  align-items: center;
+  background: #0e0e10;
+  border-radius: 40px;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100%;
+  transition: background 0.5s ease;
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn:hover .span {
+  background: transparent;
 }
